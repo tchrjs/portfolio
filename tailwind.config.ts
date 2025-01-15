@@ -7,6 +7,15 @@ export default {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    fontFamily: {
+      sans: [
+        "Inter, sans-serif",
+        {
+          fontFeatureSettings: '"cv11", "ss01"',
+          fontVariationSettings: '"opsz" 32',
+        },
+      ],
+    },
     extend: {
       colors: {
         background: "hsl(var(--background))",

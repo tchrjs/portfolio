@@ -7,7 +7,7 @@ export default function PageContent(props: PageContentProps) {
   return (
     <div className="relative flex flex-col min-h-screen">
       <NavBar />
-      <main className="flex-grow mt-12">{children}</main>
+      <main className="flex-grow mt-12 p-4">{children}</main>
       <footer className="flex justify-center items-center bottom-0 py-4 border-t-[1px]">
         <p className="text-sm text-center">
           Designed and developed by{" "}

@@ -6,7 +6,9 @@ import Hero from "@/content/hero.mdx";
 export default function Home() {
   return (
     <PageContent>
-      <Hero />
+      <div className="p-2">
+        <Hero />
+      </div>
     </PageContent>
   );
 }
