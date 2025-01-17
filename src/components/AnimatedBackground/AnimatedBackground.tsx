@@ -45,31 +45,6 @@ export default function AnimatedBackground(props: AnimatedBackgroundProps) {
     return { left: left, top: top };
   };
 
-  const createShape = (delay: number) => {
-    const { left, top } = getRandomPosition();
-
-    const shape: ShapeProps = {
-      style: {
-        ...getRandomElement(shapeTypes),
-        backgroundColor: getRandomElement(colors),
-        left: left + "px",
-        top: top + "px",
-      },
-      animate: {
-        scale: [0, 1, 0],
-        rotate: [0, 360, 0],
-        opacity: [0, 1, 0],
-      },
-      transition: {
-        duration: Math.random() * 5 + 5,
-        repeatType: "reverse",
-        delay: delay,
-      },
-      state: true,
-    };
-    return shape;
-  };
-
   const randomizeShape = async (index: number) => {
     setShapes((prevShapes) => {
       const newShapes = [...prevShapes];
@@ -95,12 +70,34 @@ export default function AnimatedBackground(props: AnimatedBackgroundProps) {
   };
 
   useEffect(() => {
-    setTimeout(() => {
-      for (let i = 0; i < (props.shapeCount || 0); i++) {
-        setShapes((prevShapes) => [...prevShapes, createShape(i * 0.5)]);
-      }
-    }, props.delay);
-  }, []);
+    const createShape = (delay: number) => {
+      const { left, top } = getRandomPosition();
+      const shape: ShapeProps = {
+        style: {
+          ...getRandomElement(shapeTypes),
+          backgroundColor: getRandomElement(colors),
+          left: left + "px",
+          top: top + "px",
+        },
+        animate: {
+          scale: [0, 1, 0],
+          rotate: [0, 360, 0],
+          opacity: [0, 1, 0],
+        },
+        transition: {
+          duration: Math.random() * 5 + 5,
+          repeatType: "reverse",
+          delay: delay,
+        },
+        state: true,
+      };
+      return shape;
+    };
+
+    for (let i = 0; i < (props.shapeCount || 0); i++) {
+      setShapes((prevShapes) => [...prevShapes, createShape(i * 0.5)]);
+    }
+  }, [props.shapeCount]);
 
   return (
     <div className="absolute w-full h-full" ref={containerRef}>
