@@ -1,6 +1,6 @@
 "use client";
 
-import { getRandomElement } from "@/lib/utils";
+import { getRandomElement, getRandomInt } from "@/lib/utils";
 import * as motion from "motion/react-client";
 import { useEffect, useRef, useState } from "react";
 
@@ -46,10 +46,10 @@ export default function AnimatedBackground(props: AnimatedBackgroundProps) {
 
   const getRandomPosition = () => {
     const left = containerRef.current
-      ? Math.random() * containerRef.current.offsetWidth
+      ? getRandomInt(-50, containerRef.current.offsetWidth - 50)
       : 0;
     const top = containerRef.current
-      ? Math.random() * containerRef.current.offsetHeight
+      ? getRandomInt(-50, containerRef.current.offsetHeight - 50)
       : 0;
     return { left: left, top: top };
   };
