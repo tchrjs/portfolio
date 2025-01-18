@@ -6,7 +6,6 @@ import { useEffect, useRef, useState } from "react";
 
 interface AnimatedBackgroundProps {
   shapeCount?: number;
-  delay?: number;
 }
 
 interface ShapeProps {
@@ -20,15 +19,25 @@ const box = {
   width: 100,
   height: 100,
   borderRadius: 5,
+  clipPath: "",
 };
 
 const circle = {
   width: 100,
   height: 100,
   borderRadius: "50%",
+  clipPath: "",
 };
 
-const shapeTypes = [box, circle];
+const star = {
+  width: 100,
+  height: 100,
+  borderRadius: 0,
+  clipPath:
+    "polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%)",
+};
+
+const shapeTypes = [box, circle, star];
 const colors = ["#EAE0CC", "#D14081", "#C9ADA1", "#04A777", "#023436"];
 
 export default function AnimatedBackground(props: AnimatedBackgroundProps) {
@@ -47,17 +56,9 @@ export default function AnimatedBackground(props: AnimatedBackgroundProps) {
 
   const randomizeShape = async (index: number) => {
     setShapes((prevShapes) => {
+      const { left, top } = getRandomPosition();
       const newShapes = [...prevShapes];
       newShapes[index].state = false;
-      return newShapes;
-    });
-
-    await new Promise((resolve) => setTimeout(resolve, 500));
-
-    const { left, top } = getRandomPosition();
-    setShapes((prevShapes) => {
-      const newShapes = [...prevShapes];
-      newShapes[index].state = true;
       newShapes[index].style = {
         ...newShapes[index].style,
         ...getRandomElement(shapeTypes),
@@ -65,9 +66,25 @@ export default function AnimatedBackground(props: AnimatedBackgroundProps) {
         left: left + "px",
         top: top + "px",
       };
+      newShapes[index].animate = {
+        ...newShapes[index].animate,
+        rotate: [0, Math.random() < 0.5 ? -360 : 360, 0],
+      };
+      newShapes[index].transition = {
+        ...newShapes[index].transition,
+        duration: Math.random() * 5 + 5,
+      };
       return newShapes;
     });
   };
+
+  useEffect(() => {
+    shapes.map((shape) => {
+      if (!shape.state) {
+        shape.state = true;
+      }
+    });
+  }, [shapes]);
 
   useEffect(() => {
     const createShape = (delay: number) => {
@@ -81,7 +98,7 @@ export default function AnimatedBackground(props: AnimatedBackgroundProps) {
         },
         animate: {
           scale: [0, 1, 0],
-          rotate: [0, 360, 0],
+          rotate: [0, Math.random() < 0.5 ? -360 : 360, 0],
           opacity: [0, 1, 0],
         },
         transition: {
@@ -95,7 +112,7 @@ export default function AnimatedBackground(props: AnimatedBackgroundProps) {
     };
 
     for (let i = 0; i < (props.shapeCount || 0); i++) {
-      setShapes((prevShapes) => [...prevShapes, createShape(i * 0.5)]);
+      setShapes((prevShapes) => [...prevShapes, createShape(i * 1)]);
     }
   }, [props.shapeCount]);
 
@@ -105,7 +122,7 @@ export default function AnimatedBackground(props: AnimatedBackgroundProps) {
         (shape, index) =>
           shape.state && (
             <motion.div
-              className="absolute"
+              className="absolute opacity-0 scale-0"
               key={index}
               style={{ ...shape.style }}
               animate={{ ...shape.animate }}
@@ -114,7 +131,7 @@ export default function AnimatedBackground(props: AnimatedBackgroundProps) {
             />
           )
       )}
-      <div className="absolute w-full h-full bg-gradient-to-b from-0% from-transparent via-50% via-background to-100% to-transparent"></div>
+      <div className="absolute w-full h-full bg-gradient-to-b from-20% from-transparent via-50% via-background to-70% to-transparent"></div>
     </div>
   );
 }
