@@ -2,13 +2,13 @@
 
 import About from "@/content/about.mdx";
 import * as motion from "motion/react-client";
-import AnimatedBackground from "../AnimatedBackground/AnimatedBackground";
+import AnimatedBackground from "./animated-background";
 
 export default function Hero() {
   return (
-    <section className="container mx-auto grid min-h-[min(100dvh,100vh)] pb-[var(--navbar-height)] items-center px-4 contain-content">
+    <section className="mx-auto grid min-h-[min(100dvh,100vh)] pb-[var(--navbar-height)] items-center px-4 contain-content">
       <AnimatedBackground shapeCount={15} />
-      <div className="flex flex-col justify-center items-center text-center z-10">
+      <div className="flex flex-col justify-center items-center text-center z-10 w-full">
         <motion.p
           className="font-bold"
           animate={{ opacity: [0, 1], y: [10, -10, 5, 0] }}
