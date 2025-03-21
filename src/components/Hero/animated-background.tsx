@@ -1,8 +1,8 @@
 "use client";
 
 import { getRandomElement, getRandomInt } from "@/lib/utils";
-import * as motion from "motion/react-client";
 import { useEffect, useRef, useState } from "react";
+import * as motion from "motion/react-client";
 
 interface AnimatedBackgroundProps {
   shapeCount?: number;
