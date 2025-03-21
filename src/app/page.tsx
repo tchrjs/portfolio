@@ -1,5 +1,5 @@
 import Hero from "@/components/hero/hero";
-import PageContent from "@/components/page_content/page-content";
+import { PageContent } from "@/components/layout/page-content";
 
 export default function Home() {
   return (

@@ -1,18 +1,18 @@
 import { ReactNode } from "react";
-import Footer from "../footer/footer";
-import NavBar from "../navbar/navbar";
+import Header from "./header";
+import Footer from "./footer";
 
 interface PageContentProps {
   children?: ReactNode;
   className?: string;
 }
 
-export default function PageContent(props: PageContentProps) {
+export function PageContent(props: PageContentProps) {
   const { children } = props;
 
   return (
-    <div className="flex flex-col min-h-screen">
-      <NavBar />
+    <div className="flex flex-1 flex-col">
+      <Header />
       <main className="flex-grow">{children}</main>
       <Footer />
     </div>

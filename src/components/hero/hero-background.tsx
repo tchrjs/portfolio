@@ -40,7 +40,7 @@ const star = {
 const shapeTypes = [box, circle, star];
 const colors = ["#EAE0CC", "#D14081", "#C9ADA1", "#04A777", "#023436"];
 
-export default function AnimatedBackground(props: AnimatedBackgroundProps) {
+export default function HeroBackground(props: AnimatedBackgroundProps) {
   const [shapes, setShapes] = useState<ShapeProps[]>([]);
   const containerRef = useRef<HTMLDivElement>(null);
 

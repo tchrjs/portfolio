@@ -72,3 +72,22 @@
     src: url("./../../public/fonts/Roboto.ttf");
   }
 }
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .container-wrapper {
+    @apply max-w-[1400px] min-[1800px]:max-w-screen-2xl mx-auto w-full;
+  }
+
+  .container {
+    @apply px-4 xl:px-6 mx-auto max-w-screen-2xl;
+  }
+}
