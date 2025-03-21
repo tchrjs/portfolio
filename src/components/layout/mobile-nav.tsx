@@ -1,3 +1,5 @@
+"use client";
+
 import { Hamburger01Icon } from "hugeicons-react";
 import { Button } from "../ui/button";
 

@@ -4,6 +4,10 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: "My Portfolio",
   description: "Designed and developed by Christian Toribio",
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "black-translucent",
+  },
 };
 
 export default function RootLayout({

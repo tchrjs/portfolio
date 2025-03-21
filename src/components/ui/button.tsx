@@ -1,6 +1,5 @@
 import { Slot } from "@radix-ui/react-slot";
 import { cn } from "@/lib/utils";
-import { forwardRef } from "react";
 
 // Type Definitions / Interfaces
 
@@ -15,25 +14,22 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Variants: Record<Variant, string> = {
   default: "",
-  icon: "s",
+  icon: "",
 };
 
 // Component Definition
 
-const Button = forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, asChild, variant = "default", ...props }, ref) => {
-    const Comp = asChild ? Slot : "button";
+function Button(props: ButtonProps) {
+  const { className, asChild, variant = "default", ...rest } = props;
+  const Comp = asChild ? Slot : "button";
 
-    return (
-      <Comp
-        ref={ref}
-        className={cn("", Variants[variant], className)}
-        {...props}
-      />
-    );
-  }
-);
-
-Button.displayName = "Button";
+  return (
+    <Comp
+      data-slot="button"
+      className={cn("", Variants[variant], className)}
+      {...rest}
+    />
+  );
+}
 
 export { Button };
