@@ -111,9 +111,11 @@ export default function HeroBackground(props: AnimatedBackgroundProps) {
       return shape;
     };
 
-    for (let i = 0; i < (props.shapeCount || 0); i++) {
-      setShapes((prevShapes) => [...prevShapes, createShape(i * 1)]);
-    }
+    setTimeout(() => {
+      for (let i = 0; i < (props.shapeCount || 0); i++) {
+        setShapes((prevShapes) => [...prevShapes, createShape(i * 1)]);
+      }
+    }, 2000);
   }, [props.shapeCount]);
 
   return (
@@ -132,7 +134,7 @@ export default function HeroBackground(props: AnimatedBackgroundProps) {
             />
           )
       )}
-      <div className="absolute w-full h-full bg-gradient-to-b from-20% from-transparent via-50% via-background to-70% to-transparent"></div>
+      <div className="absolute w-full h-full bg-gradient-to-b from-transparent via-background via-50% to-transparent"></div>
     </div>
   );
 }

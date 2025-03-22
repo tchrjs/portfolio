@@ -13,7 +13,7 @@ export default function PageContent(props: PageContentProps) {
   return (
     <div className="flex flex-1 flex-col">
       <Header />
-      <main className="flex-grow">{children}</main>
+      <main>{children}</main>
       <Footer />
     </div>
   );
