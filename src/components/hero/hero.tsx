@@ -10,7 +10,7 @@ export default function Hero() {
       <div className="container-wrapper">
         <div className="container grid h-[min(100dvh,100vh)] lg:max-h-[1000px] contain-content">
           <HeroBackground shapeCount={15} />
-          <div className="flex flex-col justify-center items-center text-center z-10 w-full pb-[var(--navbar-height)]">
+          <div className="flex flex-col justify-center items-center text-center z-10 w-full pb-[48px]">
             <motion.p
               className="font-bold opacity-0"
               animate={{ opacity: [0, 1], y: [10, -10, 5, 0] }}

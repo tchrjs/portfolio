@@ -13,7 +13,7 @@ export default function Header() {
         <div
           className={`container min-h-[48px] flex items-center w-full ${
             pastThreshold
-              ? "bg-background/75 backdrop-blur-sm bg-opacity-100"
+              ? "bg-background/95 border-b-1 backdrop-blur-sm bg-opacity-100"
               : "bg-opacity-0"
           } transition-all ease-in`}
         >
