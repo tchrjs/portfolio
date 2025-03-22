@@ -7,7 +7,7 @@ interface PageContentProps {
   className?: string;
 }
 
-export function PageContent(props: PageContentProps) {
+export default function PageContent(props: PageContentProps) {
   const { children } = props;
 
   return (

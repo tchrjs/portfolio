@@ -14,7 +14,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Variants: Record<Variant, string> = {
   default: "",
-  icon: "",
+  icon: cn("text-foreground/65 hover:text-foreground transition-transform"),
 };
 
 // Component Definition
@@ -32,4 +32,4 @@ function Button(props: ButtonProps) {
   );
 }
 
-export { Button };
+export default Button;
