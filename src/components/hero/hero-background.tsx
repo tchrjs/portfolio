@@ -134,7 +134,6 @@ export default function HeroBackground(props: AnimatedBackgroundProps) {
             />
           )
       )}
-      <div className="absolute w-full h-full bg-gradient-to-b from-transparent via-background via-50% to-transparent"></div>
     </div>
   );
 }

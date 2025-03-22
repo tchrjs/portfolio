@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { cn } from "@/lib/utils";
+import { Funnel_Sans } from "next/font/google";
 
 export const metadata: Metadata = {
   title: "My Portfolio",
@@ -10,6 +12,8 @@ export const metadata: Metadata = {
   },
 };
 
+const font = Funnel_Sans({ subsets: ["latin"] });
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -17,7 +21,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="flex min-h-screen w-full flex-col dark">{children}</body>
+      <body
+        className={cn("flex min-h-screen w-full flex-col dark", font.className)}
+      >
+        {children}
+      </body>
     </html>
   );
 }

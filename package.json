@@ -11,7 +11,9 @@
   "dependencies": {
     "@mdx-js/loader": "^3.1.0",
     "@mdx-js/react": "^3.1.0",
+    "@next/font": "^14.2.15",
     "@next/mdx": "^15.1.4",
+    "@svgr/webpack": "^8.1.0",
     "@types/mdx": "^2.0.13",
     "clsx": "^2.1.1",
     "hugeicons-react": "^0.3.0",

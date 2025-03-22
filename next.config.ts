@@ -11,6 +11,13 @@ const nextConfig: NextConfig = {
     removeConsole: process.env.NODE_ENV !== "development",
   },
   devIndicators: { appIsrStatus: false },
+  webpack(config) {
+    config.module.rules.push({
+      test: /\.svg$/,
+      use: ["@svgr/webpack"],
+    });
+    return config;
+  },
 };
 
 const withMDX = createMDX({

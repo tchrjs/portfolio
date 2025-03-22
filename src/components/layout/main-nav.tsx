@@ -41,8 +41,8 @@ const PageLink = (props: PageLinkProps) => {
       <div
         className={`flex flex-col justify-center items-center gap-1 ${
           currentPath === href
-            ? "text-foreground hover:text-foreground/65"
-            : "text-foreground/65 hover:text-foreground"
+            ? "text-foreground"
+            : "text-muted hover:text-foreground"
         }`}
       >
         <div>{children}</div>
