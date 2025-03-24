@@ -17,7 +17,7 @@ export default function MobileNav() {
         } transition-all ease-in`}
       >
         <div className="flex flex-grow justify-end py-4">
-          <Button variant="icon">
+          <Button>
             <Hamburger01Icon />
           </Button>
         </div>

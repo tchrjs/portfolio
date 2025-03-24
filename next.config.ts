@@ -10,7 +10,7 @@ const nextConfig: NextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV !== "development",
   },
-  devIndicators: { appIsrStatus: false },
+  devIndicators: false,
   webpack(config) {
     config.module.rules.push({
       test: /\.svg$/,

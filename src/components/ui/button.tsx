@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 // Type Definitions / Interfaces
 
-type Variant = "default" | "icon";
+type Variant = "default" | "link";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   asChild?: boolean;
@@ -14,7 +14,7 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Variants: Record<Variant, string> = {
   default: "",
-  icon: cn("text-foreground/65 hover:text-foreground transition-transform"),
+  link: "text-foreground/35 hover:text-foreground transition-all",
 };
 
 // Component Definition

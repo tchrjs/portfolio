@@ -7,13 +7,18 @@ import HeroBackground from "./hero-background";
 export default function Hero() {
   return (
     <section className="container-wrapper">
-      <div className="container grid h-[min(100dvh,100vh)] md:max-h-[600px] contain-content">
+      <div className="container grid h-[min(100dvh,100vh)] md:max-h-[600px] contain-content border-b-1">
         <HeroBackground shapeCount={15} />
-        <div className="flex flex-col justify-center items-center text-center z-10 w-full pb-[48px] md:pb-0">
+        <div className="flex flex-col justify-center items-center text-center z-10 w-full pb-[48px] md:pb-0 pointer-events-none">
           <motion.p
             className="font-bold opacity-0"
             animate={{ opacity: [0, 1], y: [50, 0] }}
-            transition={{ duration: 1, type: "spring", bounce: 0.5 }}
+            transition={{
+              type: "spring",
+              stiffness: 200,
+              damping: 10,
+              duration: 1,
+            }}
           >
             Hi! I am
           </motion.p>

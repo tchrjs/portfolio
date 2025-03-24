@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import { cn } from "@/lib/utils";
 import { Funnel_Sans } from "next/font/google";
+import PageContent from "@/components/layout/page-content";
 
 export const metadata: Metadata = {
   title: "My Portfolio",
@@ -24,7 +25,7 @@ export default function RootLayout({
       <body
         className={cn("flex min-h-screen w-full flex-col dark", font.className)}
       >
-        {children}
+        <PageContent>{children}</PageContent>
       </body>
     </html>
   );
