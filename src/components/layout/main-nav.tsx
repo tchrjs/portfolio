@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Button from "../ui/button";
 import { GithubIcon, Linkedin01Icon } from "hugeicons-react";
-import * as motion from "motion/react-client";
+import Dice from "../tech/cube";
 
 export default function MainNav() {
   const currentPath = usePathname();
