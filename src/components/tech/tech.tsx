@@ -32,13 +32,13 @@ export default function Tech() {
         <div className="absolute opacity-10">
           <Cube icon={icon} />
         </div>
-        <div className="flex flex-col items-center z-10">
+        <div className="flex flex-col items-center">
           <div className="text-2xl">Tech</div>
           <div className="text-md text-muted-foreground">
             What I use for software development
           </div>
         </div>
-        <div className="flex flex-col justify-center items-center gap-4 w-full z-10">
+        <div className="flex flex-col justify-center items-center gap-4 w-full">
           <div className="overflow-x-auto no-scrollbar whitespace-nowrap flex flex-wrap justify-center gap-4 items-center max-w-2/3">
             <Button
               variant="label"
