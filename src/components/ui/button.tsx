@@ -13,7 +13,8 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 // Constants / Default Values
 
 const Variants: Record<Variant, string> = {
-  default: "",
+  default:
+    "bg-button text-button-foreground hover:bg-button-foreground hover:text-button border px-4 py-2 rounded-sm",
   link: "bg-transparent text-foreground/35 hover:text-foreground transition-all",
   icon: "bg-transparent",
   label:
@@ -29,11 +30,7 @@ function Button(props: ButtonProps) {
   return (
     <Comp
       data-slot="button"
-      className={cn(
-        "bg-button text-button-foreground",
-        Variants[variant],
-        className
-      )}
+      className={cn("", Variants[variant], className)}
       {...rest}
     />
   );

@@ -38,47 +38,91 @@ export default function Tech() {
         </div>
         <div className="flex flex-col justify-center items-center gap-4 w-full">
           <div className="overflow-x-auto no-scrollbar whitespace-nowrap flex flex-wrap justify-center gap-4 items-center max-w-2/3">
-            <Button variant="label" onClick={() => handleClick("typescript")}>
+            <Button
+              variant="label"
+              disabled={true}
+              onClick={() => handleClick("typescript")}
+            >
               <TypescriptOriginal />
               TypeScript
             </Button>
-            <Button variant="label" onClick={() => handleClick("javascript")}>
+            <Button
+              variant="label"
+              disabled={true}
+              onClick={() => handleClick("javascript")}
+            >
               <JavascriptOriginal />
               JavaScript
             </Button>
-            <Button variant="label" onClick={() => handleClick("gdscript")}>
+            <Button
+              variant="label"
+              disabled={true}
+              onClick={() => handleClick("gdscript")}
+            >
               <GodotOriginal />
               GDScript
             </Button>
-            <Button variant="label" onClick={() => handleClick("csharp")}>
+            <Button
+              variant="label"
+              disabled={true}
+              onClick={() => handleClick("csharp")}
+            >
               <CsharpOriginal />
               C#
             </Button>
-            <Button variant="label" onClick={() => handleClick("cplusplus")}>
+            <Button
+              variant="label"
+              disabled={true}
+              onClick={() => handleClick("cplusplus")}
+            >
               <CplusplusOriginal />
               C++
             </Button>
-            <Button variant="label" onClick={() => handleClick("nextjs")}>
+            <Button
+              variant="label"
+              disabled={true}
+              onClick={() => handleClick("nextjs")}
+            >
               <NextjsOriginal />
               Next.js
             </Button>
-            <Button variant="label" onClick={() => handleClick("reactjs")}>
+            <Button
+              variant="label"
+              disabled={true}
+              onClick={() => handleClick("reactjs")}
+            >
               <ReactOriginal />
               React.js
             </Button>
-            <Button variant="label" onClick={() => handleClick("html")}>
+            <Button
+              variant="label"
+              disabled={true}
+              onClick={() => handleClick("html")}
+            >
               <Html5Original />
               HTML5
             </Button>
-            <Button variant="label" onClick={() => handleClick("css")}>
+            <Button
+              variant="label"
+              disabled={true}
+              onClick={() => handleClick("css")}
+            >
               <Css3Original />
               CSS3
             </Button>
-            <Button variant="label" onClick={() => handleClick("tailwind")}>
+            <Button
+              variant="label"
+              disabled={true}
+              onClick={() => handleClick("tailwind")}
+            >
               <TailwindcssOriginal />
               Tailwind CSS
             </Button>
-            <Button variant="label" onClick={() => handleClick("supabase")}>
+            <Button
+              variant="label"
+              disabled={true}
+              onClick={() => handleClick("supabase")}
+            >
               <SupabaseOriginal />
               Supabase
             </Button>
