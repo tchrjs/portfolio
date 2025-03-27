@@ -126,6 +126,7 @@ export default function HeroBackground(props: AnimatedBackgroundProps) {
             <motion.div
               className="absolute"
               key={index}
+              drag
               initial={{ opacity: 0, scale: 0 }}
               style={{ ...shape.style }}
               animate={{ ...shape.animate }}
