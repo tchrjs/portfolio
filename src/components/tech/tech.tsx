@@ -28,7 +28,7 @@ export default function Tech() {
   return (
     <section className="container-wrapper flex">
       <div
-        className={`container flex flex-col px-4 py-8 gap-4 bg-background text-foreground items-center ${style} w-full transition-all`}
+        className={`container flex flex-col px-4 py-8 gap-4 bg-background text-foreground items-center ${style} w-full transition-colors`}
       >
         <div className="flex flex-col items-center">
           <div className="text-2xl">Tech</div>
