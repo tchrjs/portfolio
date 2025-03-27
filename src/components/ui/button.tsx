@@ -3,7 +3,7 @@ import { cn } from "@/lib/utils";
 
 // Type Definitions / Interfaces
 
-type Variant = "default" | "link" | "icon";
+type Variant = "default" | "link" | "icon" | "label";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   asChild?: boolean;
@@ -14,8 +14,10 @@ interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Variants: Record<Variant, string> = {
   default: "",
-  link: "text-foreground/35 hover:text-foreground transition-all",
-  icon: "flex justify-between items-center gap-4 rounded-md px-4 py-2 h-fit text-nowrap border border-input hover:bg-accent hover:text-accent-foreground",
+  link: "bg-transparent text-foreground/35 hover:text-foreground transition-all",
+  icon: "bg-transparent",
+  label:
+    "flex justify-between items-center gap-4 rounded-md px-4 py-2 h-fit text-nowrap border border-input hover:bg-accent hover:text-accent-foreground",
 };
 
 // Component Definition

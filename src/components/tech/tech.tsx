@@ -28,7 +28,7 @@ export default function Tech() {
   return (
     <section className="container-wrapper flex">
       <div
-        className={`container flex flex-col px-4 py-8 gap-4 bg-background text-foreground items-center ${style} w-full`}
+        className={`container flex flex-col px-4 py-8 gap-4 bg-background text-foreground items-center ${style} w-full transition-all`}
       >
         <div className="flex flex-col items-center">
           <div className="text-2xl">Tech</div>
@@ -38,47 +38,47 @@ export default function Tech() {
         </div>
         <div className="flex flex-col justify-center items-center gap-4 w-full">
           <div className="overflow-x-auto no-scrollbar whitespace-nowrap flex flex-wrap justify-center gap-4 items-center max-w-2/3">
-            <Button variant="icon" onClick={() => handleClick("typescript")}>
+            <Button variant="label" onClick={() => handleClick("typescript")}>
               <TypescriptOriginal />
               TypeScript
             </Button>
-            <Button variant="icon" onClick={() => handleClick("javascript")}>
+            <Button variant="label" onClick={() => handleClick("javascript")}>
               <JavascriptOriginal />
               JavaScript
             </Button>
-            <Button variant="icon" onClick={() => handleClick("gdscript")}>
+            <Button variant="label" onClick={() => handleClick("gdscript")}>
               <GodotOriginal />
               GDScript
             </Button>
-            <Button variant="icon" onClick={() => handleClick("csharp")}>
+            <Button variant="label" onClick={() => handleClick("csharp")}>
               <CsharpOriginal />
               C#
             </Button>
-            <Button variant="icon" onClick={() => handleClick("cplusplus")}>
+            <Button variant="label" onClick={() => handleClick("cplusplus")}>
               <CplusplusOriginal />
               C++
             </Button>
-            <Button variant="icon" onClick={() => handleClick("nextjs")}>
+            <Button variant="label" onClick={() => handleClick("nextjs")}>
               <NextjsOriginal />
               Next.js
             </Button>
-            <Button variant="icon" onClick={() => handleClick("reactjs")}>
+            <Button variant="label" onClick={() => handleClick("reactjs")}>
               <ReactOriginal />
               React.js
             </Button>
-            <Button variant="icon" onClick={() => handleClick("html")}>
+            <Button variant="label" onClick={() => handleClick("html")}>
               <Html5Original />
               HTML5
             </Button>
-            <Button variant="icon" onClick={() => handleClick("css")}>
+            <Button variant="label" onClick={() => handleClick("css")}>
               <Css3Original />
               CSS3
             </Button>
-            <Button variant="icon" onClick={() => handleClick("tailwind")}>
+            <Button variant="label" onClick={() => handleClick("tailwind")}>
               <TailwindcssOriginal />
               Tailwind CSS
             </Button>
-            <Button variant="icon" onClick={() => handleClick("supabase")}>
+            <Button variant="label" onClick={() => handleClick("supabase")}>
               <SupabaseOriginal />
               Supabase
             </Button>
