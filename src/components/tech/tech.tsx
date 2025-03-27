@@ -37,55 +37,51 @@ export default function Tech() {
           </div>
         </div>
         <div className="flex flex-col justify-center items-center gap-4 w-full">
-          <div className="w-full overflow-x-auto no-scrollbar whitespace-nowrap flex md:flex-col gap-4 items-center">
-            <div className="flex gap-4">
-              <Button variant="icon" onClick={() => handleClick("typescript")}>
-                <TypescriptOriginal />
-                TypeScript
-              </Button>
-              <Button variant="icon" onClick={() => handleClick("javascript")}>
-                <JavascriptOriginal />
-                JavaScript
-              </Button>
-              <Button variant="icon" onClick={() => handleClick("gdscript")}>
-                <GodotOriginal />
-                GDScript
-              </Button>
-              <Button variant="icon" onClick={() => handleClick("csharp")}>
-                <CsharpOriginal />
-                C#
-              </Button>
-              <Button variant="icon" onClick={() => handleClick("cplusplus")}>
-                <CplusplusOriginal />
-                C++
-              </Button>
-            </div>
-            <div className="flex gap-4">
-              <Button variant="icon" onClick={() => handleClick("nextjs")}>
-                <NextjsOriginal />
-                Next.js
-              </Button>
-              <Button variant="icon" onClick={() => handleClick("reactjs")}>
-                <ReactOriginal />
-                React.js
-              </Button>
-              <Button variant="icon" onClick={() => handleClick("html")}>
-                <Html5Original />
-                HTML5
-              </Button>
-              <Button variant="icon" onClick={() => handleClick("css")}>
-                <Css3Original />
-                CSS3
-              </Button>
-              <Button variant="icon" onClick={() => handleClick("tailwind")}>
-                <TailwindcssOriginal />
-                Tailwind CSS
-              </Button>
-              <Button variant="icon" onClick={() => handleClick("supabase")}>
-                <SupabaseOriginal />
-                Supabase
-              </Button>
-            </div>
+          <div className="overflow-x-auto no-scrollbar whitespace-nowrap flex flex-wrap justify-center gap-4 items-center max-w-2/3">
+            <Button variant="icon" onClick={() => handleClick("typescript")}>
+              <TypescriptOriginal />
+              TypeScript
+            </Button>
+            <Button variant="icon" onClick={() => handleClick("javascript")}>
+              <JavascriptOriginal />
+              JavaScript
+            </Button>
+            <Button variant="icon" onClick={() => handleClick("gdscript")}>
+              <GodotOriginal />
+              GDScript
+            </Button>
+            <Button variant="icon" onClick={() => handleClick("csharp")}>
+              <CsharpOriginal />
+              C#
+            </Button>
+            <Button variant="icon" onClick={() => handleClick("cplusplus")}>
+              <CplusplusOriginal />
+              C++
+            </Button>
+            <Button variant="icon" onClick={() => handleClick("nextjs")}>
+              <NextjsOriginal />
+              Next.js
+            </Button>
+            <Button variant="icon" onClick={() => handleClick("reactjs")}>
+              <ReactOriginal />
+              React.js
+            </Button>
+            <Button variant="icon" onClick={() => handleClick("html")}>
+              <Html5Original />
+              HTML5
+            </Button>
+            <Button variant="icon" onClick={() => handleClick("css")}>
+              <Css3Original />
+              CSS3
+            </Button>
+            <Button variant="icon" onClick={() => handleClick("tailwind")}>
+              <TailwindcssOriginal />
+              Tailwind CSS
+            </Button>
+            <Button variant="icon" onClick={() => handleClick("supabase")}>
+              <SupabaseOriginal />
+              Supabase
+            </Button>
           </div>
         </div>
       </div>
