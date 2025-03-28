@@ -11,7 +11,7 @@ export default function Hero() {
     <section className="container-wrapper">
       <div className="container grid h-[min(100dvh,100vh)] md:max-h-[600px] contain-content">
         <HeroBackground shapeCount={15} />
-        <div className="flex flex-col justify-center items-center text-center z-10 w-full pb-[48px] md:pb-0 pointer-events-none">
+        <div className="flex flex-col justify-center items-center text-center z-10 w-full pb-[56px] md:pb-0 pointer-events-none">
           <motion.p
             className="font-bold opacity-0"
             animate={{ opacity: [0, 1], y: [50, 0] }}
@@ -47,7 +47,7 @@ export default function Hero() {
               className="bg-[#04A777] text-foreground hover:bg-foreground hover:text-[#04A777] transition-colors pointer-events-auto"
               asChild
             >
-              <Link href="/work">View Work</Link>
+              <Link href="/projects">View Projects</Link>
             </Button>
             <Button className="pointer-events-auto" asChild>
               <Link href="/blog">Read Blog</Link>
