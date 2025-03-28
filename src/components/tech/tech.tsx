@@ -29,7 +29,7 @@ export default function Tech() {
   return (
     <section className="container-wrapper flex">
       <div className="container flex flex-col px-4 py-32 gap-4 justify-center items-center w-full">
-        <div className="absolute opacity-10">
+        <div className="absolute opacity-10 pointer-events-none">
           <Cube icon={icon} />
         </div>
         <div className="flex flex-col items-center">
