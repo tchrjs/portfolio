@@ -1,12 +1,19 @@
+import { cn } from "@/lib/utils";
 import Card from "../ui/card";
 
 interface ProjectProps {
   children?: React.ReactNode;
+  className?: string;
 }
 
-function Project({ children }: ProjectProps) {
+function Project({ children, className }: ProjectProps) {
   return (
-    <Card className="flex flex-col items-center gap-1 p-4 bg-card text-card-foreground">
+    <Card
+      className={cn(
+        "flex flex-col items-center text-center gap-1 p-4 bg-card text-card-foreground",
+        className
+      )}
+    >
       {children}
     </Card>
   );

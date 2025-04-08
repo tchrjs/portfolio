@@ -67,7 +67,7 @@ export default function Page() {
                 <Css3Original size={30} />
                 <SupabaseOriginal size={30} />
               </ProjectTechnology>
-              <div className="text-muted text-center text-nowrap mt-4">
+              <div className="text-card-foreground/35 text-center text-nowrap mt-4">
                 <Link href="https://tchrjs-grocery-tracker.vercel.app/">
                   tchrjs-grocery-tracker.vercel.app
                 </Link>
@@ -80,7 +80,11 @@ export default function Page() {
               My portfolio website to showcase my projects, who I am, and what
               services I can provide.
             </ProjectDescription>
-            <ProjectContent></ProjectContent>
+            <ProjectContent>
+              <div className="rounded-full md:max-w-1/3 contain-content">
+                <img className="relative object-contain" src="/me/6.jpg"></img>
+              </div>
+            </ProjectContent>
             <ProjectFooter>
               <ProjectTechnology>
                 <NextjsOriginal size={30} />
@@ -90,7 +94,7 @@ export default function Page() {
                 <Html5Original size={30} />
                 <Css3Original size={30} />
               </ProjectTechnology>
-              <div className="text-muted text-center text-nowrap mt-4">
+              <div className="text-card-foreground/35 text-center text-nowrap mt-4">
                 <Link href="https://tchrjs-portfolio.vercel.app/">
                   tchrjs-portfolio.vercel.app
                 </Link>

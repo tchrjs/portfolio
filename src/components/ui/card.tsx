@@ -13,7 +13,7 @@ interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 // Constants / Default Values
 
 const Variants: Record<Variant, string> = {
-  default: "",
+  default: "bg-card text-card-foreground border-none",
 };
 
 // Component Definition
@@ -23,7 +23,7 @@ function Card(props: CardProps) {
 
   return (
     <div
-      className={`${cn("border rounded-md p-4", Variants[variant], className)}`}
+      className={`${cn("rounded-md p-4", Variants[variant], className)}`}
       {...rest}
     >
       {children}
