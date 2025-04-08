@@ -65,8 +65,8 @@ export default function Page() {
           <Project>
             <ProjectTitle>My Portfolio</ProjectTitle>
             <ProjectDescription>
-              as My personal website to showcase showcase projects, who I am,
-              and services I can provide.
+              My portfolio website to showcase my projects, who I am, and what
+              services I can provide.
             </ProjectDescription>
             <ProjectContent></ProjectContent>
             <ProjectFooter>
