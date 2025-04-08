@@ -10,7 +10,7 @@ export default function MainNav() {
 
   return (
     <div className="hidden md:flex w-full">
-      <div className="flex w-full p-4 border-b-1 h-[56px] background-blur">
+      <div className="flex w-full p-4 h-[56px] background-blur">
         <div className="flex w-1/3"></div>
         <div className="flex w-1/3 justify-center items-center gap-4">
           <PageLink currentPath={currentPath} href="/">

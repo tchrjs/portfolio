@@ -141,7 +141,7 @@
   }
 
   .container-wrapper {
-    @apply max-w-[1400px] min-[1800px]:max-w-screen-2xl mx-auto w-full md:border-x-1;
+    @apply max-w-[1400px] min-[1800px]:max-w-screen-2xl mx-auto w-full;
   }
 
   .container {
