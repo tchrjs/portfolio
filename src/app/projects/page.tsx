@@ -38,8 +38,8 @@ export default function Page() {
         </div>
       </div>
       <section className="container-wrapper">
-        <div className="container flex flex-col gap-8 md:w-3/4">
-          <Project>
+        <div className="container flex flex-wrap justify-center gap-4">
+          <Project className="w-[400px] max-w-[400px] h-[800px] max-h-[800px]">
             <ProjectTitle>Grocery Tracker</ProjectTitle>
             <ProjectDescription>
               A <span className="text-[#04A777]">Progressive Web App</span> to
@@ -74,14 +74,14 @@ export default function Page() {
               </div>
             </ProjectFooter>
           </Project>
-          <Project>
+          <Project className="w-[400px] max-w-[400px] h-[400px] max-h-[400px]">
             <ProjectTitle>My Portfolio</ProjectTitle>
             <ProjectDescription>
               My portfolio website to showcase my projects, who I am, and what
               services I can provide.
             </ProjectDescription>
             <ProjectContent>
-              <div className="rounded-full md:max-w-1/3 contain-content">
+              <div className="rounded-full max-w-1/2 contain-content">
                 <img className="relative object-contain" src="/me/6.jpg"></img>
               </div>
             </ProjectContent>

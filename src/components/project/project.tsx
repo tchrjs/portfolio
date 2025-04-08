@@ -34,7 +34,11 @@ function ProjectSeparator() {
 }
 
 function ProjectContent({ children }: { children?: React.ReactNode }) {
-  return <div className="flex p-4 items-center justify-center">{children}</div>;
+  return (
+    <div className="flex p-4 items-center justify-center flex-grow">
+      {children}
+    </div>
+  );
 }
 
 function ProjectTechnology({ children }: { children?: React.ReactNode }) {
@@ -46,7 +50,11 @@ function ProjectTechnology({ children }: { children?: React.ReactNode }) {
 }
 
 function ProjectFooter({ children }: { children?: React.ReactNode }) {
-  return <div className="bottom-0 flex flex-col items-center">{children}</div>;
+  return (
+    <div className="bottom-0 flex flex-col justify-end items-center">
+      {children}
+    </div>
+  );
 }
 
 export {
