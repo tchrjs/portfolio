@@ -16,13 +16,25 @@ import {
   TypescriptOriginal,
 } from "devicons-react";
 import Link from "next/link";
+import * as motion from "motion/react-client";
 
 export default function Page() {
   return (
     <div className="mt-[56px]">
       <div className="container-wrapper">
         <div className="container">
-          <div className="text-2xl py-8 text-center">2025</div>
+          <motion.p
+            className="opacity-0 text-2xl py-8 text-center"
+            animate={{ opacity: [0, 1], y: [50, 0] }}
+            transition={{
+              type: "spring",
+              stiffness: 200,
+              damping: 10,
+              duration: 1,
+            }}
+          >
+            2025
+          </motion.p>
         </div>
       </div>
       <section className="container-wrapper">
