@@ -10,7 +10,7 @@ function Project({ children, className }: ProjectProps) {
   return (
     <Card
       className={cn(
-        "flex flex-col items-center text-center gap-1 p-4 bg-card text-card-foreground",
+        "flex flex-col items-center text-center gap-1 p-4 bg-card text-card-foreground overflow-hidden",
         className
       )}
     >

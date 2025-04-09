@@ -30,7 +30,7 @@ export default function MyPortfolio() {
   };
 
   return (
-    <Project className="w-[400px] max-w-[400px] h-[400px] max-h-[400px]">
+    <Project className="w-[400px] max-w-[400px] min-h-[400px] md:max-h-[400px]">
       <ProjectTitle>My Portfolio</ProjectTitle>
       <ProjectDescription>
         My portfolio website to showcase my projects, who I am, and what
@@ -43,7 +43,7 @@ export default function MyPortfolio() {
           onClick={handleClick}
         >
           <img
-            className="object-cover w-full h-full"
+            className="object-cover w-full h-full select-none"
             src={`/me/${index}.jpg`}
           ></img>
         </motion.div>

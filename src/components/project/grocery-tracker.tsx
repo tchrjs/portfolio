@@ -19,7 +19,7 @@ import Link from "next/link";
 
 export default function GroceryTracker() {
   return (
-    <Project className="w-[400px] max-w-[400px] h-[800px] max-h-[800px]">
+    <Project className="w-[400px] max-w-[400px] min-h-[800px] md:max-h-[800px]">
       <ProjectTitle>Grocery Tracker</ProjectTitle>
       <ProjectDescription>
         A <span className="text-[#04A777]">Progressive Web App</span> to help
