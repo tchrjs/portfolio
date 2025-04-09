@@ -24,25 +24,13 @@ export default function Hero() {
           >
             Hi! I am
           </motion.p>
-          <motion.div
-            className="text-sm text-foreground opacity-0"
-            animate={{ opacity: [0, 1] }}
-            transition={{ duration: 1, delay: 1 }}
-          >
+          <div className="text-sm text-foreground">
             <p className="font-bold text-xl">Christian Toribio</p>
-          </motion.div>
-          <motion.div
-            className="text-sm text-muted-foreground opacity-0 flex"
-            animate={{ opacity: [0, 1] }}
-            transition={{ duration: 1, delay: 1.25 }}
-          >
+          </div>
+          <div className="text-sm text-muted-foreground flex">
             <About />
-          </motion.div>
-          <motion.div
-            className="text-sm text-muted-foreground opacity-0 flex pt-2 gap-4"
-            animate={{ opacity: [0, 1] }}
-            transition={{ duration: 1, delay: 1.5 }}
-          >
+          </div>
+          <div className="text-sm text-muted-foreground flex pt-2 gap-4">
             <Button
               className="bg-[#04A777] text-foreground hover:bg-foreground hover:text-[#04A777] transition-colors pointer-events-auto"
               asChild
@@ -52,7 +40,7 @@ export default function Hero() {
             <Button className="pointer-events-auto" asChild>
               <Link href="/blog">Read Blog</Link>
             </Button>
-          </motion.div>
+          </div>
         </div>
       </div>
     </section>

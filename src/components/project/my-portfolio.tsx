@@ -40,10 +40,10 @@ export default function MyPortfolio() {
         <motion.div
           className="rounded-full w-[175px] h-[175px] overflow-hidden"
           whileTap={{ scale: 0.9 }}
-          onClick={handleClick}
+          onPointerUp={handleClick}
         >
           <img
-            className="object-cover w-full h-full select-none"
+            className="object-cover w-full h-full"
             src={`/me/${index}.jpg`}
           ></img>
         </motion.div>
