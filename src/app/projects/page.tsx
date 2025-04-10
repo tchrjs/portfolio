@@ -1,6 +1,6 @@
 import PageContent from "@/components/layout/page-content";
-import GroceryTracker from "@/components/project/grocery-tracker";
-import MyPortfolio from "@/components/project/my-portfolio";
+import GroceryTracker from "@/components/projects/grocery-tracker";
+import MyPortfolio from "@/components/projects/my-portfolio";
 
 export default function Page() {
   return (

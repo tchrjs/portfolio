@@ -7,7 +7,7 @@ import {
   ProjectFooter,
   ProjectTechnology,
   ProjectTitle,
-} from "@/components/project/project";
+} from "@/components/projects/project";
 import {
   Css3Original,
   Html5Original,
