@@ -19,9 +19,9 @@ import { IoCodeSlashOutline } from "react-icons/io5";
 
 export default function Tech() {
   return (
-    <section className="container-wrapper w-full h-full">
-      <div className="container flex flex-col gap-4 justify-center w-full h-full">
-        <Card className="flex flex-wrap md:flex-nowrap gap-6 p-6">
+    <section className="container-wrapper">
+      <div className="container flex flex-col gap-4 justify-center">
+        <Card className="flex flex-wrap md:flex-nowrap gap-6 p-6 ">
           <div className="justify-between gap-1 min-w-2/5">
             <div className="text-2xl flex gap-2 items-center">
               <IoCodeSlashOutline />

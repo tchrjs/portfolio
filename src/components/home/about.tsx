@@ -5,7 +5,7 @@ import Separator from "../ui/separator";
 
 export default function About() {
   return (
-    <section className="container-wrapper">
+    <section className="container-wrapper" id="about-section">
       <div className="container flex justify-center mb-64">
         <div className="max-w-xl px-6 flex flex-col gap-8">
           <Separator />
