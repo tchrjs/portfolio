@@ -13,7 +13,7 @@ interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 // Constants / Default Values
 
 const Variants: Record<Variant, string> = {
-  default: "bg-card text-card-foreground border",
+  default: "bg-card text-card-foreground border shadow-md",
 };
 
 // Component Definition

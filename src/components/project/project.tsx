@@ -25,7 +25,7 @@ function ProjectTitle({ children }: { children?: React.ReactNode }) {
 
 function ProjectDescription({ children }: { children?: React.ReactNode }) {
   return (
-    <div className="text-md text-muted-foreground text-center">{children}</div>
+    <div className="text-md text-foreground/50 text-center">{children}</div>
   );
 }
 

@@ -57,7 +57,7 @@ export default function MyPortfolio() {
           <Html5Original size={30} />
           <Css3Original size={30} />
         </ProjectTechnology>
-        <div className="text-card-foreground/35 text-center text-nowrap mt-4">
+        <div className="text-foreground/25 text-center text-nowrap mt-4">
           <Link href="https://tchrjs-portfolio.vercel.app/">
             tchrjs-portfolio.vercel.app
           </Link>

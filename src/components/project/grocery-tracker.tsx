@@ -22,7 +22,7 @@ export default function GroceryTracker() {
     <Project className="w-[400px] max-w-[400px] min-h-[800px] md:max-h-[800px]">
       <ProjectTitle>Grocery Tracker</ProjectTitle>
       <ProjectDescription>
-        A <span className="text-[#04A777]">Progressive Web App</span> to help
+        A <span className="text-green-600">Progressive Web App</span> to help
         track grocery prices and to help manage spendings.
       </ProjectDescription>
       <ProjectContent>
@@ -47,7 +47,7 @@ export default function GroceryTracker() {
           <Css3Original size={30} />
           <SupabaseOriginal size={30} />
         </ProjectTechnology>
-        <div className="text-card-foreground/35 text-center text-nowrap mt-4">
+        <div className="text-foreground/25 text-center text-nowrap mt-4">
           <Link href="https://tchrjs-grocery-tracker.vercel.app/">
             tchrjs-grocery-tracker.vercel.app
           </Link>

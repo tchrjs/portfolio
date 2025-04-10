@@ -6,10 +6,6 @@ import { Funnel_Sans } from "next/font/google";
 export const metadata: Metadata = {
   title: "My Portfolio",
   description: "Designed and developed by Christian Toribio",
-  appleWebApp: {
-    capable: true,
-    statusBarStyle: "black-translucent",
-  },
 };
 
 const font = Funnel_Sans({ subsets: ["latin"] });

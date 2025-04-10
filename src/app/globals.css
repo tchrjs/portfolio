@@ -88,7 +88,7 @@
 .dark {
   --background: #121212;
   --foreground: #ffffff;
-  --card: #1b1b1b;
+  --card: #1a1a1a;
   --card-foreground: #ffffff;
   --popover: #121212;
   --popover-foreground: #ffffff;
@@ -102,7 +102,7 @@
   --accent-foreground: #ffffff;
   --destructive: #c0392b;
   --destructive-foreground: #e74c3c;
-  --button: #121212;
+  --button: #1a1a1a;
   --button-foreground: #ffffff;
   --border: #444444;
   --input: #444444;
@@ -144,11 +144,11 @@
   }
 
   .container-wrapper {
-    @apply max-w-[1400px] min-[1800px]:max-w-screen-2xl mx-auto w-full;
+    @apply relative mx-auto w-full;
   }
 
   .container {
-    @apply px-4 xl:px-6 mx-auto max-w-screen-2xl;
+    @apply px-6 mx-auto max-w-screen-lg;
   }
 
   .background-blur {
