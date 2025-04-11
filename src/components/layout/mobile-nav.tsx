@@ -4,6 +4,10 @@ import { Cancel01Icon, Hamburger01Icon } from "hugeicons-react";
 import Button from "../ui/button";
 import useScrollThreshold from "@/hooks/use-scroll-threshold";
 import { Dialog, VisuallyHidden } from "radix-ui";
+import Link from "next/link";
+import Separator from "../ui/separator";
+import * as motion from "motion/react-client";
+import { usePathname } from "next/navigation";
 
 export default function MobileNav() {
   const pastThreshold = useScrollThreshold(10);
@@ -42,19 +46,66 @@ function NavMenu() {
             <Dialog.Title />
             <Dialog.Description />
           </VisuallyHidden.Root>
-          <div className="container-wrapper">
-            <div className="container">
-              <div className="flex flex-grow justify-end py-4">
-                <Dialog.Close asChild>
-                  <Button variant="icon">
-                    <Cancel01Icon />
-                  </Button>
-                </Dialog.Close>
-              </div>
+          <div className="flex flex-col w-full h-full">
+            <div className="flex justify-end py-4 px-6">
+              <Dialog.Close asChild>
+                <Button variant="icon">
+                  <Cancel01Icon />
+                </Button>
+              </Dialog.Close>
+            </div>
+            <div className="flex flex-col justify-center w-full p-2">
+              <NavLink href="/" label="Home" delay={0} />
+              <NavLink href="/projects" label="Projects" delay={0.1} />
+              <NavLink href="/blog" label="Blog" delay={0.2} />
             </div>
           </div>
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>
+  );
+}
+
+interface NavLinkProps {
+  href: string;
+  label: string;
+  delay?: number;
+}
+
+function NavLink({ href, label, delay = 0 }: NavLinkProps) {
+  const pathname = usePathname();
+  const isActive = pathname === href;
+
+  return (
+    <motion.div
+      className="flex flex-col"
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{
+        duration: 0.3,
+        delay,
+        ease: "easeIn",
+      }}
+    >
+      {isActive ? (
+        <Dialog.Close asChild>
+          <Button
+            className="text-muted-foreground hover:text-muted-foreground text-start hover:bg-background/50 px-2 py-3 w-full"
+            variant="link"
+          >
+            {label}
+          </Button>
+        </Dialog.Close>
+      ) : (
+        <Button
+          className="text-muted-foreground hover:text-muted-foreground text-start hover:bg-background/50 px-2 py-3 w-full"
+          variant="link"
+          asChild
+        >
+          <Link href={href}>{label}</Link>
+        </Button>
+      )}
+      <Separator />
+    </motion.div>
   );
 }
