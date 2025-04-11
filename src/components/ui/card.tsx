@@ -2,7 +2,7 @@ import { cn } from "@/lib/utils";
 
 // Type Definitions / Interfaces
 
-type Variant = "default";
+type Variant = "default" | "outline";
 
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
   className?: string;
@@ -13,7 +13,8 @@ interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 // Constants / Default Values
 
 const Variants: Record<Variant, string> = {
-  default: "bg-card text-card-foreground border shadow-md",
+  default: "border shadow-md bg-card text-card-foreground",
+  outline: "border shadow-md bg-background text-foreground",
 };
 
 // Component Definition
@@ -23,6 +24,7 @@ function Card(props: CardProps) {
 
   return (
     <div
+      data-slot="card"
       className={`${cn("rounded-lg p-4", Variants[variant], className)}`}
       {...rest}
     >
