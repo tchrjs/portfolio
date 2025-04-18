@@ -1,13 +1,15 @@
 import PageContent, { StaticChild } from "@/components/layout/page-content";
 import {
-  Project,
-  ProjectDescription,
   ProjectList,
   Projects,
   ProjectsHeader,
-  ProjectStateLabel,
-  ProjectTitle,
 } from "@/components/projects/projects";
+import {
+  ProjectCard,
+  ProjectCardDescription,
+  ProjectCardStateLabel,
+  ProjectCardTitle,
+} from "@/components/projects/project-card";
 import {
   IoBrowsersOutline,
   IoCog,
@@ -39,21 +41,21 @@ export default function Page() {
           Web Development
         </ProjectsHeader>
         <ProjectList>
-          <Project>
-            <ProjectStateLabel state={"in-progress"} />
-            <ProjectTitle>My Portfolio</ProjectTitle>
-            <ProjectDescription>
+          <ProjectCard href="/projects/my-portfolio">
+            <ProjectCardStateLabel state={"in-progress"} />
+            <ProjectCardTitle>My Portfolio</ProjectCardTitle>
+            <ProjectCardDescription>
               A showcase of my work, background, and the services I offer.
-            </ProjectDescription>
-          </Project>
-          <Project>
-            <ProjectStateLabel state={"completed"} />
-            <ProjectTitle>Grocery Tracker</ProjectTitle>
-            <ProjectDescription>
+            </ProjectCardDescription>
+          </ProjectCard>
+          <ProjectCard href="/projects/grocery-tracker">
+            <ProjectCardStateLabel state={"completed"} />
+            <ProjectCardTitle>Grocery Tracker</ProjectCardTitle>
+            <ProjectCardDescription>
               A<span className="text-green-600"> Progressive Web App </span>
               to help track grocery prices and to help manage spendings.
-            </ProjectDescription>
-          </Project>
+            </ProjectCardDescription>
+          </ProjectCard>
         </ProjectList>
       </Projects>
       <Projects>
@@ -62,13 +64,13 @@ export default function Page() {
           Game Development
         </ProjectsHeader>
         <ProjectList>
-          <Project>
-            <ProjectStateLabel state={"in-progress"} />
-            <ProjectTitle>Keno Game</ProjectTitle>
-            <ProjectDescription>
+          <ProjectCard href="/projects/keno-game-template">
+            <ProjectCardStateLabel state={"in-progress"} />
+            <ProjectCardTitle>Keno Game Template</ProjectCardTitle>
+            <ProjectCardDescription>
               A simple game of Keno, a lottery-like gambling game.
-            </ProjectDescription>
-          </Project>
+            </ProjectCardDescription>
+          </ProjectCard>
         </ProjectList>
       </Projects>
     </PageContent>

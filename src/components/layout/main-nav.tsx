@@ -6,7 +6,8 @@ import Button from "../ui/button";
 import { GithubIcon, Linkedin01Icon } from "hugeicons-react";
 
 export default function MainNav() {
-  const currentPath = usePathname();
+  const pathname = usePathname();
+  const currentPath = "/" + pathname.split("/")[1];
 
   return (
     <div className="container-wrapper background-blur">
