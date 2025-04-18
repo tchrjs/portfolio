@@ -14,7 +14,7 @@ export default function MobileNav() {
 
   return (
     <div
-      className={`container-wrapper ${
+      className={`${
         pastThreshold
           ? "background-blur border-b-1 bg-opacity-100"
           : "bg-opacity-0"

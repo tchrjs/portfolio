@@ -11,7 +11,7 @@ export default function Hero() {
   return (
     <section className="container-wrapper h-screen md:max-h-[600px] w-full">
       <div className="container w-full h-full flex items-center justify-center">
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 pb-[56px] md:pb-0">
           <div className="text-center">
             <div className="text-md md:text-lg">Hi! I am</div>
             <div className="text-xl md:text-2xl text-foreground font-bold">

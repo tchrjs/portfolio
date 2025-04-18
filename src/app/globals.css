@@ -90,7 +90,7 @@
   --foreground: #ffffff;
   --card: #1a1a1a;
   --card-foreground: #ffffff;
-  --popover: #121212;
+  --popover: #0c0c0c;
   --popover-foreground: #ffffff;
   --primary: #ffffff;
   --primary-foreground: #333333;
@@ -144,7 +144,7 @@
   }
 
   .container-wrapper {
-    @apply relative mx-auto w-full;
+    @apply relative mx-auto w-full min-w-64;
   }
 
   .container {
