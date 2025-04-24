@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import Button from "../ui/button";
 import { GithubIcon, Linkedin01Icon } from "hugeicons-react";
+import { FaItchIo } from "react-icons/fa6";
 
 export default function MainNav() {
   const pathname = usePathname();
@@ -24,7 +25,7 @@ export default function MainNav() {
               <span>Blog</span>
             </PageLink>
           </div>
-          <div className="flex w-1/2 justify-end gap-4">
+          <div className="flex w-1/2 justify-end gap-4 items-center">
             <Link
               className="flex"
               target="_blank"
@@ -32,6 +33,15 @@ export default function MainNav() {
             >
               <Button variant="link" asChild>
                 <GithubIcon />
+              </Button>
+            </Link>
+            <Link
+              className="flex"
+              target="_blank"
+              href={"https://tchrjs.itch.io/"}
+            >
+              <Button variant="link" asChild>
+                <FaItchIo size={24} />
               </Button>
             </Link>
             <Link
