@@ -6,7 +6,7 @@ interface ProjectProps {
 function Projects({ children }: ProjectProps) {
   return (
     <section className="container-wrapper">
-      <div className="container mt-8">{children}</div>
+      <div className="container mt-8 px-8">{children}</div>
     </section>
   );
 }

@@ -18,9 +18,9 @@ import {
 
 export default function Page() {
   return (
-    <PageContent className="mt-[56px]">
+    <PageContent>
       <StaticChild>
-        <section className="container-wrapper bg-[#0c0c0c] border-y mb-8">
+        <section className="container-wrapper bg-[#0f0f0f] border-b mb-8">
           <div className="container px-4 py-8">
             <div>
               <div className="text-3xl flex gap-2 items-center">

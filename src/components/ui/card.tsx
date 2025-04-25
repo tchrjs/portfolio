@@ -27,11 +27,7 @@ function Card(props: CardProps) {
   return (
     <div
       data-slot="card"
-      className={`${cn(
-        "rounded-md p-4 border shadow-md shadow-black",
-        Variants[variant],
-        className
-      )}`}
+      className={`${cn("rounded-md p-4 border", Variants[variant], className)}`}
       {...rest}
     >
       {children}

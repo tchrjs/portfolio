@@ -1,19 +1,44 @@
-import PageContent from "@/components/layout/page-content";
+import PageContent, { StaticChild } from "@/components/layout/page-content";
 import Button from "@/components/ui/button";
+import Figure from "@/components/ui/figure";
 import Separator from "@/components/ui/separator";
+import { Calendar01Icon, Clock01Icon } from "hugeicons-react";
 import Link from "next/link";
+import { BiCalendar } from "react-icons/bi";
 
 export default function Page() {
   return (
-    <PageContent className="mt-[56px]">
-      <section className="container-wrapper">
-        <div className="container">
-          <div className="text-center text-2xl py-8">
-            Game Development: Keno
+    <PageContent>
+      <StaticChild>
+        <section className="container-wrapper bg-[#0f0f0f] border-b">
+          <div className="container">
+            <div className="text-md py-4 gap-2 flex">
+              <Link href={"/projects"}>Projects</Link>
+              <div>{" > "}</div>
+              <Link href={"/projects/keno"}>Keno</Link>
+            </div>
           </div>
-        </div>
-      </section>
-      <section className="container-wrapper">
+        </section>
+        <section className="container-wrapper pt-8">
+          <div className="container flex flex-col">
+            <div className="text-2xl">Keno</div>
+            <div className="flex gap-2 text-foreground/75 text-center flex-wrap">
+              <div className="flex gap-1 items-center flex-nowrap">
+                <BiCalendar className="size-4" />
+                <div>April 4, 2025</div>
+              </div>
+              <div>•</div>
+              <div>completed</div>
+              <div>•</div>
+              <div className="flex gap-1 items-center flex-nowrap">
+                <Clock01Icon className="size-4" />
+                <div>1min read</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </StaticChild>
+      <section className="container-wrapper pt-16">
         <div className="container">
           <div className="text-xl">About</div>
           <div className="flex flex-col gap-4">
@@ -49,8 +74,7 @@ export default function Page() {
           </div>
         </div>
       </section>
-      <br />
-      <section className="container-wrapper">
+      <section className="container-wrapper pt-16">
         <div className="container">
           <div className="text-xl">Features</div>
           <div className="flex flex-col gap-4">
@@ -68,10 +92,14 @@ export default function Page() {
                 based on the payouts table on the left.
               </div>
             </div>
-            <figure className="flex items-center justify-center md:px-16">
-              <img src="/keno/game.png"></img>
-            </figure>
           </div>
+        </div>
+      </section>
+      <section className="container-wrapper pt-16">
+        <div className="container">
+          <Figure className="md:px-8" variant="browser">
+            <img src="/keno/game.png"></img>
+          </Figure>
         </div>
       </section>
     </PageContent>

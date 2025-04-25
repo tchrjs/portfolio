@@ -2,7 +2,6 @@
 
 import { Cancel01Icon, Hamburger01Icon } from "hugeicons-react";
 import Button from "../ui/button";
-import useScrollThreshold from "@/hooks/use-scroll-threshold";
 import { Dialog, VisuallyHidden } from "radix-ui";
 import Link from "next/link";
 import Separator from "../ui/separator";
@@ -10,16 +9,8 @@ import * as motion from "motion/react-client";
 import { usePathname } from "next/navigation";
 
 export default function MobileNav() {
-  const pastThreshold = useScrollThreshold(10);
-
   return (
-    <div
-      className={`${
-        pastThreshold
-          ? "background-blur border-b-1 bg-opacity-100"
-          : "bg-opacity-0"
-      } transition-all ease-in`}
-    >
+    <div className="background-blur border-b-1">
       <div className="container flex md:hidden w-full">
         <div className="min-h-[48px] flex items-center w-full">
           <div className="flex flex-grow justify-end py-4">
@@ -47,14 +38,14 @@ function NavMenu() {
             <Dialog.Description />
           </VisuallyHidden.Root>
           <div className="flex flex-col w-full h-full">
-            <div className="flex justify-end py-4 px-6">
+            <div className="flex justify-end py-4 px-6 border-b-1">
               <Dialog.Close asChild>
                 <Button variant="icon">
                   <Cancel01Icon />
                 </Button>
               </Dialog.Close>
             </div>
-            <div className="flex flex-col justify-center w-full p-2">
+            <div className="flex flex-col justify-center w-full px-8">
               <NavLink href="/" label="Home" delay={0} />
               <NavLink href="/projects" label="Projects" delay={0.1} />
               <NavLink href="/blog" label="Blog" delay={0.2} />
