@@ -64,9 +64,9 @@ export default function Page() {
           Game Development
         </ProjectsHeader>
         <ProjectList>
-          <ProjectCard href="/projects/keno-game-template">
-            <ProjectCardStateLabel state={"in-progress"} />
-            <ProjectCardTitle>Keno Game Template</ProjectCardTitle>
+          <ProjectCard href="/projects/keno">
+            <ProjectCardStateLabel state={"completed"} />
+            <ProjectCardTitle>Keno</ProjectCardTitle>
             <ProjectCardDescription>
               A simple game of Keno, a lottery-like gambling game.
             </ProjectCardDescription>

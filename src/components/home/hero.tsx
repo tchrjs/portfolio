@@ -9,7 +9,7 @@ export default function Hero() {
   const pastThreshold = useScrollThreshold();
 
   return (
-    <section className="container-wrapper h-dvh md:max-h-[600px] w-full">
+    <section className="container-wrapper h-screen md:max-h-[600px] w-full">
       <div className="container w-full h-full flex items-center justify-center">
         <div className="flex flex-col gap-4 pb-[56px] md:pb-0">
           <div className="text-center">
