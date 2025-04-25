@@ -2,7 +2,7 @@ import PageContent, { StaticChild } from "@/components/layout/page-content";
 import Button from "@/components/ui/button";
 import Figure from "@/components/ui/figure";
 import Separator from "@/components/ui/separator";
-import { Calendar01Icon, Clock01Icon } from "hugeicons-react";
+import { Clock01Icon } from "hugeicons-react";
 import Link from "next/link";
 import { BiCalendar } from "react-icons/bi";
 
@@ -25,7 +25,7 @@ export default function Page() {
             <div className="flex gap-2 text-foreground/75 text-center flex-wrap">
               <div className="flex gap-1 items-center flex-nowrap">
                 <BiCalendar className="size-4" />
-                <div>April 4, 2025</div>
+                <div>April 24, 2025</div>
               </div>
               <div>•</div>
               <div>completed</div>
