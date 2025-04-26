@@ -41,13 +41,6 @@ export default function Page() {
           Web Development
         </ProjectsHeader>
         <ProjectList>
-          <ProjectCard href="/projects/my-portfolio">
-            <ProjectCardStateLabel state={"in-progress"} />
-            <ProjectCardTitle>My Portfolio</ProjectCardTitle>
-            <ProjectCardDescription>
-              A showcase of my work, background, and the services I offer.
-            </ProjectCardDescription>
-          </ProjectCard>
           <ProjectCard href="/projects/grocery-tracker">
             <ProjectCardStateLabel state={"completed"} />
             <ProjectCardTitle>Grocery Tracker</ProjectCardTitle>
