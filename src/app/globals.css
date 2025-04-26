@@ -148,7 +148,7 @@
   }
 
   .container {
-    @apply px-8 sm:px-6 mx-auto max-w-screen-md;
+    @apply px-4 sm:px-6 mx-auto max-w-screen-md;
   }
 
   .background-blur {

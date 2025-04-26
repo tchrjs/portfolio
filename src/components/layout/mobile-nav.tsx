@@ -1,12 +1,18 @@
 "use client";
 
-import { Cancel01Icon, Hamburger01Icon } from "hugeicons-react";
+import {
+  Cancel01Icon,
+  Github01Icon,
+  Hamburger01Icon,
+  Linkedin01Icon,
+} from "hugeicons-react";
 import Button from "../ui/button";
 import { Dialog, VisuallyHidden } from "radix-ui";
 import Link from "next/link";
 import Separator from "../ui/separator";
 import * as motion from "motion/react-client";
 import { usePathname } from "next/navigation";
+import { FaItchIo } from "react-icons/fa6";
 
 export default function MobileNav() {
   return (
@@ -38,7 +44,7 @@ function NavMenu() {
             <Dialog.Description />
           </VisuallyHidden.Root>
           <div className="flex flex-col w-full h-full">
-            <div className="flex justify-end py-4 px-6 border-b-1">
+            <div className="flex justify-end p-4 border-b-1">
               <Dialog.Close asChild>
                 <Button variant="icon">
                   <Cancel01Icon />
@@ -50,6 +56,54 @@ function NavMenu() {
               <NavLink href="/projects" label="Projects" delay={0.1} />
               <NavLink href="/blog" label="Blog" delay={0.2} />
             </div>
+
+            <motion.div
+              className="flex flex-col xs:flex-row justify-center w-full p-8 gap-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{
+                duration: 0.3,
+                delay: 0.3,
+                ease: "easeIn",
+              }}
+            >
+              <Link
+                className="flex"
+                target="_blank"
+                href={"https://github.com/tchrjs"}
+              >
+                <Button variant="link" asChild>
+                  <div className="flex gap-2">
+                    <Github01Icon />
+                    GitHub
+                  </div>
+                </Button>
+              </Link>
+              <Link
+                className="flex"
+                target="_blank"
+                href={"https://tchrjs.itch.io/"}
+              >
+                <Button variant="link" asChild>
+                  <div className="flex gap-2">
+                    <FaItchIo size={24} />
+                    Itch.io
+                  </div>
+                </Button>
+              </Link>
+              <Link
+                className="flex"
+                target="_blank"
+                href={"https://www.linkedin.com/in/christian-toribio/"}
+              >
+                <Button variant="link" asChild>
+                  <div className="flex gap-2">
+                    <Linkedin01Icon />
+                    LinkedIn
+                  </div>
+                </Button>
+              </Link>
+            </motion.div>
           </div>
         </Dialog.Content>
       </Dialog.Portal>

@@ -25,7 +25,7 @@ export default function Page() {
             <div className="flex gap-2 text-foreground/75 text-center flex-wrap">
               <div className="flex gap-1 items-center flex-nowrap">
                 <BiCalendar className="size-4" />
-                <div>April 24, 2025</div>
+                <div>April 24th, 2025</div>
               </div>
               <div>•</div>
               <div>completed</div>

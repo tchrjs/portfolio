@@ -20,7 +20,7 @@ export default function PageContent(props: PageContentProps) {
   return (
     <div className="flex flex-1 flex-col">
       <Header />
-      <main className={cn("", className)}>
+      <main className={cn("flex-grow", className)}>
         {Children.map(children, (child, index) => {
           if (!isValidElement(child)) return null;
 
