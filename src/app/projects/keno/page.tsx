@@ -61,7 +61,11 @@ export default function Page() {
                   GitHub Repository
                 </Link>
               </Button>
-              <Button variant="default" asChild>
+              <Button
+                className="bg-[#fa5c5c] border-[#fa5c5c] hover:bg-[#fa5c5c] font-bold"
+                variant="default"
+                asChild
+              >
                 <Link
                   className="flex"
                   target="_blank"
