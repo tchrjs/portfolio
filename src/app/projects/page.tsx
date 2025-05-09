@@ -57,6 +57,13 @@ export default function Page() {
           Game Development
         </ProjectsHeader>
         <ProjectList>
+          <ProjectCard href="/projects/lost-warrior">
+            <ProjectCardStateLabel state={"completed"} />
+            <ProjectCardTitle>Lost Warrior</ProjectCardTitle>
+            <ProjectCardDescription>
+              A turn-based game about defeating cave enemies.
+            </ProjectCardDescription>
+          </ProjectCard>
           <ProjectCard href="/projects/keno">
             <ProjectCardStateLabel state={"completed"} />
             <ProjectCardTitle>Keno</ProjectCardTitle>
