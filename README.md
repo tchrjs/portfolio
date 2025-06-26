@@ -34,13 +34,3 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-
-## TSX File Structure
-
-1. Imports (External and Internal)
-2. Type Definitions / Interfaces
-3. Constants / Default Values
-4. Utility Functions (if applicable)
-5. Component Definition
-6. Sub-components (if any)
-7. Export Statement
