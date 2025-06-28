@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { FaGithub, FaItchIo, FaLinkedin } from "react-icons/fa";
+import ThemeSwitch from "./theme-switch";
 
 const navEffect: string =
   "text-foreground/65 hover:text-foreground transition-colors";
@@ -27,6 +28,7 @@ export default function NavBar() {
           >
             <FaLinkedin />
           </Link>
+          <ThemeSwitch className={navEffect} />
         </div>
       </nav>
     </header>
