@@ -13,6 +13,9 @@ export default function NavBar() {
       </div>
       <nav className="p-8 w-full">
         <div className="flex gap-4 justify-end items-center">
+          <Link className={navEffect} href="/">
+            Home
+          </Link>
           <Link className={navEffect} href="/projects">
             Projects
           </Link>
