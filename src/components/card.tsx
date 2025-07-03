@@ -5,7 +5,7 @@ import { cn } from "@/lib/utils";
 type Variant = "default" | "borderless";
 
 interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
-  children: React.ReactNode;
+  children?: React.ReactNode;
   variant?: Variant;
   className?: string;
 }
@@ -14,7 +14,7 @@ interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const Variants: Record<Variant, string> = {
   default:
-    "border border rounded-md bg-card-background text-card-foreground p-4 shadow-md",
+    "border border rounded bg-card-background text-card-foreground p-4 shadow-md",
   borderless: "",
 };
 
