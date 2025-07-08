@@ -7,16 +7,16 @@
   --background: #ffffff;
   --foreground: #171717;
   --card-background: #ffffff;
-  --card-foreground: #171717;
-  --border: #171717;
+  --card-foreground: #222222;
+  --border: #a1a1a1;
 }
 
 .dark {
   --background: #0a0a0a;
   --foreground: #ffffff;
-  --card-background: #0a0a0a;
-  --card-foreground: #ffffff;
-  --border: #ffffff;
+  --card-background: #222222;
+  --card-foreground: #eeeeee;
+  --border: #444444;
 }
 
 @theme inline {
@@ -24,6 +24,7 @@
   --color-foreground: var(--foreground);
   --color-card-background: var(--card-background);
   --color-card-foreground: var(--card-foreground);
+  --color-border: var(--border);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
@@ -41,4 +42,22 @@ body {
     var(--background) 1px
   );
   background-size: 20px 20px;
+}
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .container {
+    @apply mx-auto min-w-screen;
+  }
+
+  .container-wrapper {
+    @apply mx-auto px-4 max-w-screen-sm min-w-64;
+  }
 }

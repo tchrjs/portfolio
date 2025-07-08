@@ -14,8 +14,8 @@ interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
 
 const Variants: Record<Variant, string> = {
   default:
-    "border border rounded bg-card-background text-card-foreground p-4 shadow-md",
-  borderless: "",
+    "border border-border rounded bg-card-background text-card-foreground p-4 shadow-md",
+  borderless: "rounded bg-card-background text-card-foreground p-4 shadow-md",
 };
 
 // Component Definition
