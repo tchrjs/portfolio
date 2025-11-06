@@ -1,28 +1,19 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
-
-const today = new Date();
+import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-    <head>
-        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    </head>
-    <body>
-        <main class="container-wrapper prose mt-16">
-            <div class="container">
-                <p>Hello! 👋</p>
-                <h1>My name Christian.</h1>
-                <p>I'm a minimalistic <span class="underline">software engineer</span>.</p>
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing
-                    elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat
-                    in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis
-                    convallis tempusleo eu aenean.
-                </p>
-            </div>
-        </main>
-    </body>
-</html>
+<BaseLayout>
+    <section class="container-wrapper mt-16">
+        <div class="container">
+            <p>Hello! 👋</p>
+            <h1>My name Christian.</h1>
+            <p>I'm a minimalistic <span class="underline">software engineer</span>.</p>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit
+                quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id.
+                Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis
+                tempusleo eu aenean.
+            </p>
+        </div>
+    </section>
+</BaseLayout>
