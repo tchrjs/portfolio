@@ -4,9 +4,5 @@
     "exclude": ["dist"],
     "compilerOptions": {
         "strictNullChecks": true
-    },
-    "prettier.documentSelectors": ["**/*.astro"],
-    "[astro]": {
-        "editor.defaultFormatter": "esbenp.prettier-vscode"
     }
 }
