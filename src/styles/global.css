@@ -1,1 +1,11 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@layer utilities {
+    .container-wrapper {
+        @apply mx-auto min-w-screen;
+    }
+    .container {
+        @apply mx-auto max-w-screen-sm min-w-64 px-4;
+    }
+}

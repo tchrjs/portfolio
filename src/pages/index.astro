@@ -1,7 +1,8 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Footer from "../components/Footer.astro";
 import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+
+const today = new Date();
 ---
 
 <!doctype html>
@@ -10,16 +11,18 @@ import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
         <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     </head>
     <body>
-        <main>
-            <p>Hello 👋</p>
-            <h1>I'm Christian Toribio</h1>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit
-                quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id.
-                Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis
-                tempusleo eu aenean.
-            </p>
+        <main class="container-wrapper prose mt-16">
+            <div class="container">
+                <p>Hello! 👋</p>
+                <h1>My name Christian.</h1>
+                <p>I'm a minimalistic <span class="underline">software engineer</span>.</p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing
+                    elit quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat
+                    in id. Placerat in id cursus mi pretium tellus duis. Pretium tellus duis
+                    convallis tempusleo eu aenean.
+                </p>
+            </div>
         </main>
-        <Footer />
     </body>
 </html>
