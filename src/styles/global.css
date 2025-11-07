@@ -26,9 +26,9 @@
 
 @layer utilities {
     .container-wrapper {
-        @apply mx-auto w-full;
+        @apply mx-auto my-8 w-full;
     }
     .container {
-        @apply mx-auto max-w-2xl min-w-64 px-4;
+        @apply mx-auto max-w-2xl px-4;
     }
 }

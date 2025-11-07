@@ -1,0 +1,42 @@
+---
+type Project = {
+    date: string | number;
+    title: string;
+    demo?: string;
+    source?: string;
+};
+
+const projects: Project[] = [
+    {
+        date: 2025,
+        title: "Slot Game Template",
+    },
+    { date: 2025, title: "Kitchen Management" },
+    { date: 2025, title: "Grocery Tracker" },
+];
+---
+
+<section class="container-wrapper">
+    <div class="container">
+        <div class="mb-8">
+            <h2 class="mb-2 text-3xl font-bold">Projects</h2>
+            <p>List of projects I have worked on.</p>
+        </div>
+        {
+            projects.length > 0 ? (
+                <ul class="grid w-full flex-wrap gap-4 sm:grid-cols-2">
+                    {projects.map((props) => (
+                        <li class="rounded bg-gray-100 px-8 py-4">
+                            <div class="mb-3">
+                                <p>{props.date}</p>
+                                <h1>{props.title}</h1>
+                            </div>
+                        </li>
+                    ))}
+                </ul>
+            ) : (
+                <p class="text-sm text-gray-500">No projects yet — stay tuned!</p>
+            )
+        }
+    </div>
+</section>
