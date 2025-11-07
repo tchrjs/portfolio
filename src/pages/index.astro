@@ -3,17 +3,24 @@ import BaseLayout from "../layouts/BaseLayout.astro";
 ---
 
 <BaseLayout>
-    <section class="container-wrapper mt-16">
+    <section class="container-wrapper mt-12">
         <div class="container">
-            <p>Hello! 👋</p>
-            <h1>My name Christian.</h1>
-            <p>I'm a minimalistic <span class="underline">software engineer</span>.</p>
-            <p>
+            <p class="mb-2">Hello!</p>
+            <p class="mb-4 text-2xl">My name is Christian.</p>
+            <p class="mb-6">
                 Lorem ipsum dolor sit amet consectetur adipiscing elit. Consectetur adipiscing elit
                 quisque faucibus ex sapien vitae. Ex sapien vitae pellentesque sem placerat in id.
                 Placerat in id cursus mi pretium tellus duis. Pretium tellus duis convallis
                 tempusleo eu aenean.
             </p>
+            <a
+                href="/resume.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-block rounded border border-gray-300 px-4 py-2 text-sm font-medium transition hover:bg-gray-200"
+            >
+                Download Resume
+            </a>
         </div>
     </section>
 </BaseLayout>
