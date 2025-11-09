@@ -19,17 +19,37 @@ const projects: Project[] = [
 <section class="container-wrapper">
     <div class="container">
         <div class="mb-8">
-            <h2 class="mb-2 text-3xl font-bold">Projects</h2>
-            <p>List of projects I have worked on.</p>
+            <h2 class="mb-4 text-3xl font-bold">Projects</h2>
+            <p>Here are a list some things I created during my free time!</p>
         </div>
         {
             projects.length > 0 ? (
                 <ul class="grid w-full flex-wrap gap-4 sm:grid-cols-2">
                     {projects.map((props) => (
-                        <li class="rounded bg-gray-100 px-8 py-4">
-                            <div class="mb-3">
-                                <p>{props.date}</p>
-                                <h1>{props.title}</h1>
+                        <li class="rounded bg-gray-100 px-8 py-6">
+                            <div class="mb-4">
+                                <div class="flex justify-between">
+                                    <h1 class="font-bold">{props.title}</h1>
+                                </div>
+                            </div>
+                            <div class="mb-4">
+                                <p class="text-foreground/75">
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                </p>
+                            </div>
+                            <div class="flex gap-2 py-2">
+                                <a
+                                    href="#"
+                                    class="inline-block h-full rounded border border-gray-300 px-2 text-center hover:bg-gray-200"
+                                >
+                                    Demo
+                                </a>
+                                <a
+                                    href="#"
+                                    class="inline-block h-full rounded border border-gray-300 px-2 text-center hover:bg-gray-200"
+                                >
+                                    Source
+                                </a>
                             </div>
                         </li>
                     ))}
