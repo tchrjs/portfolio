@@ -9,13 +9,16 @@ const posts = (await getCollection("blog")).sort(
 ---
 
 <BaseLayout title={BLOG_TITLE} description={BLOG_DESCRIPTION}>
-    <section class="container-wrapper my-16">
+    <section class="container-wrapper">
+        <div class="container">🚧 Currently under development as of 11/10/2025</div>
+    </section>
+    <section class="container-wrapper">
         <ul class="container">
             {
                 posts.map((post) => (
                     <li>
                         <a href={`/blog/${post.id}/`}>
-                            <h4>{post.data.title}</h4>
+                            {post.data.title} - {post.data.description}
                         </a>
                     </li>
                 ))
