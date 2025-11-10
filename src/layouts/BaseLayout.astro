@@ -1,0 +1,28 @@
+---
+import BaseHead from "../components/layout/BaseHead.astro";
+import Footer from "../components/layout/Footer.astro";
+import Header from "../components/layout/Header.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import "@fontsource-variable/figtree";
+
+type Props = {
+    title?: string;
+    description?: string;
+};
+
+const { title = SITE_TITLE, description = SITE_DESCRIPTION } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+    <head>
+        <BaseHead title={title} description={description} />
+    </head>
+    <body class="flex min-h-screen flex-col">
+        <Header />
+        <main class="flex-1">
+            <slot />
+        </main>
+        <Footer />
+    </body>
+</html>

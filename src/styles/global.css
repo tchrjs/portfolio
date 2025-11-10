@@ -1,0 +1,45 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+
+@theme inline {
+    --font-sans: "Figtree Variable", sans-serif;
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --color-card: var(--card);
+    --color-card-foreground: var(--card-foreground);
+    --color-primary: var(--primary);
+    --color-primary-foreground: var(--primary-foreground);
+    --color-secondary: var(--secondary);
+    --color-secondary-foreground: var(--secondary-foreground);
+}
+
+:root {
+    --background: #fafafa;
+    --foreground: #1f2937;
+    --card: #f3f4f6;
+    --card-foreground: #1f2937;
+    --primary: #49af61;
+    --primary-foreground: #fafafa;
+    --secondary: #f3f4f6;
+    --secondary-foreground: #1f2937;
+}
+
+.dark {
+    --background: #000000;
+    --foreground: #ffffff;
+}
+
+@layer base {
+    body {
+        @apply bg-background text-foreground;
+    }
+}
+
+@layer utilities {
+    .container-wrapper {
+        @apply mx-auto w-full;
+    }
+    .container {
+        @apply mx-auto max-w-2xl px-4 py-12;
+    }
+}
