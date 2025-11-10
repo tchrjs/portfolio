@@ -4,8 +4,6 @@
 @theme inline {
     --color-background: var(--background);
     --color-foreground: var(--foreground);
-    --font-sans: var(--font-geist-sans);
-    --font-mono: var(--font-geist-mono);
 }
 
 :root {
@@ -26,7 +24,7 @@
 
 @layer utilities {
     .container-wrapper {
-        @apply mx-auto my-8 w-full;
+        @apply mx-auto my-12 w-full;
     }
     .container {
         @apply mx-auto max-w-2xl px-4;
