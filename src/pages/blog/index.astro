@@ -1,13 +1,14 @@
 ---
 import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
+import { BLOG_DESCRIPTION, BLOG_TITLE } from "../../consts";
 
 const posts = (await getCollection("blog")).sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
 );
 ---
 
-<BaseLayout>
+<BaseLayout title={BLOG_TITLE} description={BLOG_DESCRIPTION}>
     <section class="container-wrapper my-16">
         <ul class="container">
             {

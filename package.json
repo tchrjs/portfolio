@@ -13,6 +13,7 @@
         "@astrojs/mdx": "^4.3.10",
         "@astrojs/rss": "^4.0.13",
         "@astrojs/sitemap": "^3.6.0",
+        "@fontsource-variable/figtree": "^5.2.10",
         "@tailwindcss/vite": "^4.1.17",
         "astro": "^5.15.4",
         "sharp": "^0.34.3",

@@ -4,15 +4,43 @@ type Project = {
     title: string;
     demo?: string;
     source?: string;
+    description?: string;
 };
 
 const projects: Project[] = [
     {
         date: 2025,
-        title: "Slot Game Template",
+        title: "Kitchen Management (WIP)",
+        demo: "https://tchrjs-kitchen-management.vercel.app/",
+        description: "A full-stack PWA to simplify kitchen management for families and cooks",
     },
-    { date: 2025, title: "Kitchen Management" },
-    { date: 2025, title: "Grocery Tracker" },
+    {
+        date: 2025,
+        title: "Slot Game Template",
+        demo: "https://slot-game-template.vercel.app/",
+        description: "A browser-based casino slot game built using Vite and PixiJS",
+    },
+    {
+        date: 2025,
+        title: "Grocery Tracker",
+        demo: "https://tchrjs-grocery-tracker.vercel.app/",
+        source: "https://github.com/tchrjs/grocery-tracker",
+        description: "A full-stack PWA for tracking grocery prices and managing spending",
+    },
+    {
+        date: 2025,
+        title: "Lost Warrior",
+        demo: "https://tchrjs.itch.io/lost-warrior",
+        source: "https://github.com/tchrjs/lost-warrior",
+        description: "A game jam entry where you strategize against cave enemies",
+    },
+    {
+        date: 2025,
+        title: "Keno",
+        demo: "https://tchrjs.itch.io/keno",
+        source: "https://github.com/tchrjs/keno",
+        description: "A simple game of Keno, a lottery-like gambling game",
+    },
 ];
 ---
 
@@ -23,33 +51,44 @@ const projects: Project[] = [
         </div>
         {
             projects.length > 0 ? (
-                <ul class="grid w-full flex-wrap gap-4 sm:grid-cols-2">
+                <ul class="grid w-full gap-4 sm:grid-cols-2">
                     {projects.map((props) => (
-                        <li class="rounded bg-gray-100 px-8 py-6">
+                        <li class="bg-card text-card-foreground rounded p-6">
                             <div class="mb-4">
-                                <div class="flex justify-between">
+                                <div class="flex flex-col justify-between">
+                                    <p class="opacity-75">{props.date}</p>
                                     <h1 class="font-bold">{props.title}</h1>
                                 </div>
                             </div>
-                            <div class="mb-4">
-                                <p class="text-foreground/75">
-                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                                </p>
-                            </div>
-                            <div class="flex gap-2 py-2">
-                                <a
-                                    href="#"
-                                    class="inline-block h-full rounded px-2 text-center hover:bg-gray-200"
-                                >
-                                    Demo
-                                </a>
-                                <a
-                                    href="#"
-                                    class="inline-block h-full rounded px-2 text-center hover:bg-gray-200"
-                                >
-                                    Source
-                                </a>
-                            </div>
+                            {props.description && (
+                                <div class="mb-4">
+                                    <p class="opacity-75">{props.description}</p>
+                                </div>
+                            )}
+                            {props.demo || props.source ? (
+                                <div class="mb-2 flex gap-4">
+                                    {props.demo && (
+                                        <a
+                                            href={props.demo}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="opacity-75 hover:underline"
+                                        >
+                                            Demo
+                                        </a>
+                                    )}
+                                    {props.source && (
+                                        <a
+                                            href={props.source}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            class="opacity-75 hover:underline"
+                                        >
+                                            Source
+                                        </a>
+                                    )}
+                                </div>
+                            ) : null}
                         </li>
                     ))}
                 </ul>

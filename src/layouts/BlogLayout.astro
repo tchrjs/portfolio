@@ -2,13 +2,14 @@
 import type { CollectionEntry } from "astro:content";
 import FormattedDate from "../components/misc/FormattedDate.astro";
 import BaseLayout from "./BaseLayout.astro";
+import { BLOG_DESCRIPTION, BLOG_TITLE } from "../consts";
 
 type Props = CollectionEntry<"blog">["data"];
 
 const { title, pubDate, updatedDate } = Astro.props;
 ---
 
-<BaseLayout>
+<BaseLayout title={BLOG_TITLE} description={BLOG_DESCRIPTION}>
     <article class="container-wrapper prose my-16">
         <div class="container">
             <div>
