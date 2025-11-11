@@ -10,10 +10,8 @@ const posts = (await getCollection("blog")).sort(
 
 <BaseLayout title={BLOG_TITLE} description={BLOG_DESCRIPTION}>
     <section class="container-wrapper">
-        <div class="container">🚧 Currently under development as of 11/10/2025</div>
-    </section>
-    <section class="container-wrapper">
         <ul class="container">
+            <h1 class="mb-4">🚧 Under development as of 11/10/2025</h1>
             {
                 posts.map((post) => (
                     <li>
