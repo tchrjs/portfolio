@@ -36,7 +36,7 @@ const groupedPosts: Record<string, typeof posts> = posts.reduce(
         Object.keys(groupedPosts)
             .sort((a, b) => Number(b) - Number(a))
             .map((year) => (
-                <section class="container-wrapper">
+                <section class="container-wrapper mb-12">
                     <div class="container">
                         <h2 class="mb-4 text-3xl font-semibold">{year}</h2>
                         <ul>
