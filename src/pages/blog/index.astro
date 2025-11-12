@@ -3,24 +3,53 @@ import { getCollection } from "astro:content";
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import { BLOG_DESCRIPTION, BLOG_TITLE } from "../../consts";
 
+// Get and sort blog posts by publication date (newest first)
 const posts = (await getCollection("blog")).sort(
     (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+
+// Group posts by year
+const groupedPosts: Record<string, typeof posts> = posts.reduce(
+    (acc, post) => {
+        const year = new Date(post.data.pubDate).getFullYear().toString();
+        if (!acc[year]) acc[year] = [];
+        acc[year].push(post);
+        return acc;
+    },
+    {} as Record<string, typeof posts>,
 );
 ---
 
 <BaseLayout title={BLOG_TITLE} description={BLOG_DESCRIPTION}>
-    <section class="container-wrapper">
-        <ul class="container">
-            <h1 class="mb-4">🚧 Under development as of 11/10/2025</h1>
-            {
-                posts.map((post) => (
-                    <li>
-                        <a class="hover:underline" href={`/blog/${post.id}/`}>
-                            {post.data.title} - {post.data.description}
-                        </a>
-                    </li>
-                ))
-            }
-        </ul>
+    <section class="container-wrapper py-12">
+        <div class="container">
+            <div class="flex flex-col">
+                <h1 class="mb-4 text-4xl font-bold">Blog</h1>
+                <p>
+                    A space where I document my growth as a developer, share experiences, and
+                    discuss ideas.
+                </p>
+            </div>
+        </div>
     </section>
+    {
+        Object.keys(groupedPosts)
+            .sort((a, b) => Number(b) - Number(a))
+            .map((year) => (
+                <section class="container-wrapper">
+                    <div class="container">
+                        <h2 class="mb-4 text-3xl font-semibold">{year}</h2>
+                        <ul>
+                            {groupedPosts[year].map((post) => (
+                                <li>
+                                    <a class="hover:underline" href={`/blog/${post.id}/`}>
+                                        {post.data.title}
+                                    </a>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+                </section>
+            ))
+    }
 </BaseLayout>

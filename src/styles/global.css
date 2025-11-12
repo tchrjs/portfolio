@@ -40,6 +40,6 @@
         @apply mx-auto w-full;
     }
     .container {
-        @apply mx-auto max-w-2xl px-6 py-12;
+        @apply mx-auto max-w-2xl px-6;
     }
 }
