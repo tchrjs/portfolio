@@ -53,7 +53,7 @@ const projects: Project[] = [
             projects.length > 0 ? (
                 <ul class="grid w-full gap-4 sm:grid-cols-2">
                     {projects.map((props) => (
-                        <li class="bg-card text-card-foreground rounded p-6">
+                        <li class="bg-card text-card-foreground flex flex-col rounded p-6">
                             <div class="mb-4">
                                 <div class="flex flex-col justify-between">
                                     <p class="opacity-75">{props.date}</p>
@@ -65,30 +65,28 @@ const projects: Project[] = [
                                     <p class="opacity-75">{props.description}</p>
                                 </div>
                             )}
-                            {props.demo || props.source ? (
-                                <div class="mb-2 flex gap-4">
-                                    {props.demo && (
-                                        <a
-                                            href={props.demo}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            class="opacity-75 hover:underline"
-                                        >
-                                            Demo
-                                        </a>
-                                    )}
-                                    {props.source && (
-                                        <a
-                                            href={props.source}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                            class="opacity-75 hover:underline"
-                                        >
-                                            Source
-                                        </a>
-                                    )}
-                                </div>
-                            ) : null}
+                            <div class="mt-auto flex gap-4">
+                                {props.demo && (
+                                    <a
+                                        href={props.demo}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="opacity-75 hover:underline"
+                                    >
+                                        Demo
+                                    </a>
+                                )}
+                                {props.source && (
+                                    <a
+                                        href={props.source}
+                                        target="_blank"
+                                        rel="noopener noreferrer"
+                                        class="opacity-75 hover:underline"
+                                    >
+                                        Source
+                                    </a>
+                                )}
+                            </div>
                         </li>
                     ))}
                 </ul>
